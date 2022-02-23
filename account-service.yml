@@ -1,13 +1,14 @@
+server:
+  port: 8080
+
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URI:http://192.168.0.200:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://registry:8761/eureka}
   instance:
     prefer-ip-address: on
 
 spring:
-  application:
-    name: account-service
   data:
     mongodb:
       uri: mongodb+srv://admin1:admin1@dbproyect.sklmn.mongodb.net/DbProyect?retryWrites=true&w=majority
