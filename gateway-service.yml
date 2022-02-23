@@ -16,10 +16,10 @@ spring:
           enabled: on
       routes:
         - id: registry-service
-          uri: lb://registry-service
+          uri: lb://registry
           predicates:
             - Path=/**
-        
+
         - id: customer-service
           uri: lb://customer
           predicates:
