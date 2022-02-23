@@ -15,8 +15,8 @@ spring:
         locator:
           enabled: on
       routes:
-        - id: registry-service
-          uri: lb://registry
+        - id: config-service
+          uri: lb://config-service
           predicates:
             - Path=/**
 
