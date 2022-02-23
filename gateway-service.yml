@@ -11,6 +11,9 @@ eureka:
 spring:
   cloud:
     gateway:
+      filter:
+        redirect-to:
+          enabled: off
       discovery:
         locator:
           enabled: on
