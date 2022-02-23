@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URI:http://registry:8080/eureka}
+      defaultZone: ${EUREKA_URI:registry:8761/eureka}
   instance:
     prefer-ip-address: on
 
@@ -24,7 +24,6 @@ spring:
           url: lb://registry
           predicates:
             - Path=/**
-
         - id: customer-service
           uri: lb://customer
           predicates:
